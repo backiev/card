@@ -2,7 +2,6 @@
    position: absolute
    top: 200px
    left: 0
-   // padding: 30px
    border: 1px solid $white
    border-radius: $borderR
    background: $white
@@ -24,9 +23,12 @@
          padding: 10px
          font-size: $fntS+2
          letter-spacing: 1px
-         background-color: #fff
-         border: 1px solid #000
+         background-color: $white
+         border: 1px solid $black
          color: black
    &-block__bottom 
       display: flex
       justify-content: space-between
+   @media screen and (max-width: 700px)
+      &-block__bottom 
+         flex-direction: column
