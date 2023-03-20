@@ -1,0 +1,32 @@
+.form 
+   position: absolute
+   top: 200px
+   left: 0
+   // padding: 30px
+   border: 1px solid $white
+   border-radius: $borderR
+   background: $white
+   height: 60vh
+   width: 100%
+   color: $black
+   animation: fromDown 1s 1 forwards
+   &-wrapper 
+      display: flex
+      flex-flow: column nowrap
+      padding: $padding*2
+   &-block 
+      display: flex
+      flex-flow: column nowrap
+      margin-bottom: $margin 
+      label 
+         font-size: $fntS
+      input 
+         padding: 10px
+         font-size: $fntS+2
+         letter-spacing: 1px
+         background-color: #fff
+         border: 1px solid #000
+         color: black
+   &-block__bottom 
+      display: flex
+      justify-content: space-between

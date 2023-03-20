@@ -1,0 +1,128 @@
+.card 
+   width: 320px
+   height: 200px
+   border-radius: $borderR
+   margin: $margin*2 auto
+   position: relative
+   transition: 1s ease
+   z-index: 10
+   perspective: 1000px
+   animation: fromTop .75s 1 forwards
+   &-front, &-back
+      position: absolute
+      top: 0
+      left: 0
+      background: url('../img/cosmos.jpg') no-repeat 50% 50%
+      background-size: cover
+      width: 100%
+      height: 100%
+      border-radius: $borderR
+      backface-visibility: hidden
+      transition: 1s ease
+
+   &:hover &-front
+      transform: rotateY(180deg)
+   &:hover &-back
+      transform: rotateY(360deg)
+   &-front
+      &__wrapper
+         position: relative
+         z-index: 2
+         padding: $padding
+      &-head
+         display: flex
+         justify-content: space-between
+         align-items: center
+         &__block
+            font-weight: 700
+            font-size: $fntS*2
+            letter-spacing: 3px
+            text-transform: uppercase
+            img
+               width: 50px 
+               height: auto
+               filter: grayscale(100%)
+      &-main
+         margin: $margin*2 0 0 0
+         font-weight: 700
+         font-size: $fntS*1.5
+         letter-spacing: 3px
+         transition: .5s ease
+         position: relative
+         display: flex
+         justify-content: space-between
+         span
+            transition: .5s ease
+            display: inline-block
+         span:nth-child(4n)
+            margin: 0 $margin 0 0
+      &-footer
+         display: flex
+         justify-content: space-between
+         padding: $padding*2.5 0 0 0
+         &__name 
+            text-transform: uppercase
+            font-size: 14px
+         &__block
+            display: flex
+            flex-flow: column nowrap
+            .block_light
+               font-size: $fntS
+               font-weight: 300
+               letter-spacing: 2px
+
+      &:after 
+         content: '\A'
+         position: absolute
+         top: 0
+         bottom: 0
+         left: 0
+         right: 0
+         background: rgba(0,0,0,0.43) 
+         transition: all 0.5s
+         -webkit-transition: all 0.5s
+         -moz-transition: all 0.5s
+         border-radius: $borderR
+         z-index: 1
+   &-back 
+      transform: rotateY(180deg)
+      &__wrapper 
+         position: relative
+         z-index: 2
+         border-radius: $borderR
+      &-head 
+         height: 35px 
+         margin-top: $margin*2
+         background: #000
+      &-main 
+         padding: 15px
+         text-align: end
+         &-title
+            font-size: $fntS
+            letter-spacing: 1px
+            margin: 0 $margin 0 0
+         &-field
+            background: $white
+            color: black
+            padding: 10px 20px
+      &-footer 
+         padding: 0 $padding
+         text-align: end
+         font-size: $fntS*1.5
+         letter-spacing: 2px
+         font-weight: 700
+         text-transform: uppercase
+         margin: 0 0 $margin 0
+      &:after 
+         content: '\A'
+         position: absolute
+         top: 0
+         bottom: 0
+         left: 0
+         right: 0
+         background: rgba(0,0,0,0.43) 
+         transition: all 0.5s
+         -webkit-transition: all 0.5s
+         -moz-transition: all 0.5s
+         border-radius: $borderR
+         z-index: 1
